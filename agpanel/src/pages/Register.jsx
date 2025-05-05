@@ -1,25 +1,25 @@
 import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Register = () => {
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
-    // Aquí iría la lógica real de login.
+    // Aquí iría la lógica de registro.
     navigate('/dashboard');
   };
 
   return (
     <div style={{ padding: '2rem' }}>
-      <h2>Iniciar Sesión</h2>
-      <form onSubmit={handleLogin}>
+      <h2>Registro</h2>
+      <form onSubmit={handleRegister}>
+        <input type="text" placeholder="Nombre" required /><br />
         <input type="email" placeholder="Correo" required /><br />
         <input type="password" placeholder="Contraseña" required /><br />
-        <button type="submit">Ingresar</button>
+        <button type="submit">Registrarse</button>
       </form>
-      <p>¿No tienes cuenta? <a href="/register">Regístrate</a></p>
     </div>
   );
 };
 
-export default Login;
+export default Register;
