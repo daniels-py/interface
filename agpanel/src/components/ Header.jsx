@@ -1,12 +1,26 @@
 import { Link } from 'react-router-dom';
+import './Header.css';
+import { useState } from 'react';
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <header style={{ padding: '1rem', background: '#f8d7da' }}>
-      <h1>Distribuidora de Belleza</h1>
-      <Link to="/login">
-        <button style={{ marginTop: '1rem' }}>Acceder</button>
-      </Link>
+    <header className="header">
+      <div className="logo">A&G</div>
+      <nav className={`nav ${isOpen ? 'open' : ''}`}>
+        <Link to="/" className="nav-link">Home</Link>
+        <Link to="/about" className="nav-link">About</Link>
+        <Link to="/services" className="nav-link">Services</Link>
+        <Link to="/contact" className="nav-link">Contact</Link>
+      </nav>
+      <div className="menu-toggle" onClick={toggleMenu}>
+        ☰
+      </div>
     </header>
   );
 };
