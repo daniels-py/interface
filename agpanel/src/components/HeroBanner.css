@@ -1,0 +1,104 @@
+/* Estilo base (para pantallas grandes) */
+.hero-banner {
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/agpanel/src/assets/react.svg'); /* Ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 800px;
+    z-index: 1;
+}
+
+.hero-content h1 {
+
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: 'Arial', sans-serif;
+
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-family: 'Arial', sans-serif;
+
+}
+
+.hero-button {
+    padding: 0.75rem 2rem;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+
+}
+
+.hero-button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Media Queries para pantallas medianas */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-button {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 480px) {
+    .hero-banner {
+        padding: 2rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .hero-button {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.8rem;
+    }
+}

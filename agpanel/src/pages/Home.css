@@ -4,39 +4,3 @@
   box-sizing: border-box;
 }
 
-.home-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ocupa toda la altura de la ventana */
-}
-
-.main-content {
-  flex: 1; /* Hace que el contenido principal ocupe el espacio disponible */
-  padding: 1rem;
-}
-
-
-
-
-.home-main {
-  flex: 1;
-  padding: 2rem;
-  margin-top: 70px; /* Ajusta según la altura real del header */
-  background-color: #f1f1f1;
-  z-index: 0;
-}
-
-.welcome-title {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
-  color: #222;
-}
-
-.grid-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-

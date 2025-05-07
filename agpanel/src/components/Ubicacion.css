@@ -23,6 +23,8 @@
   /* Texto centrado */
   .ubicacion-text {
     text-align: center;
+    font-family: 'Arial', sans-serif;
+
   }
   
   .ubicacion-title {
