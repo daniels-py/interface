@@ -12,7 +12,7 @@ const WhatsAppButton = () => {
       rel="noopener noreferrer"
     >
       <img
-        src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+        src="https://img.icons8.com/?size=100&id=16733&format=png&color=FFFFFF"
         alt="WhatsApp"
       />
     </a>

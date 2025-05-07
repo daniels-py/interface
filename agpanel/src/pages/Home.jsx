@@ -3,6 +3,8 @@ import Footer from "../components/Footer";
 import Card from "../components/Card";
 import Ubicacion from "../components/Ubicacion"; // Asegúrate que esté bien la ruta
 import HeroBanner from "../components/HeroBanner";
+import WhatsAppButton from "../components/WhatsAppButton"; // Importa el botón
+
 
 
 
@@ -20,6 +22,7 @@ const Home = () => {
       </main>
 
       <Ubicacion /> {/* Sección justo arriba del footer */}
+      <WhatsAppButton /> {/* Botón de WhatsApp */}
       <Footer />
     </div>
   );
