@@ -22,26 +22,9 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer-section">
-          <h4>Resources</h4>
-          <ul>
-            <li>Resource center</li>
-            <li>Testimonials</li>
-            <li>STV</li>
-          </ul>
-        </div>
-        <div className="footer-section">
           <h4>Partners</h4>
           <ul>
             <li>Swing Tech</li>
-          </ul>
-        </div>
-        <div className="footer-section">
-          <h4>Company</h4>
-          <ul>
-            <li>About</li>
-            <li>Press</li>
-            <li>Career</li>
-            <li>Contact</li>
           </ul>
         </div>
         <div className="footer-section">

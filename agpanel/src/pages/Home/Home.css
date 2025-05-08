@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Asegura que el body ocupe toda la pantalla */
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa al menos toda la altura de la ventana */
+}
+
+.home-main {
+  flex: 1; /* Empuja el footer hacia abajo si el contenido es menor */
+}
