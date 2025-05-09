@@ -13,10 +13,10 @@ const Header = () => {
     <header className="header">
       <div className="logo">A&G</div>
       <nav className={`nav ${isOpen ? 'open' : ''}`}>
-        <Link to="/" className="nav-link">Home</Link>
-        <Link to="/about" className="nav-link">About</Link>
+        <Link to="/" className="nav-link">Inicio</Link>
+        <Link to="/about" className="nav-link">Productos</Link>
         <Link to="/services" className="nav-link">Services</Link>
-        <Link to="/contact" className="nav-link">Contact</Link>
+        <Link to="/contact" className="nav-link">Contacto</Link>
       </nav>
       <div className="menu-toggle" onClick={toggleMenu}>
         ☰

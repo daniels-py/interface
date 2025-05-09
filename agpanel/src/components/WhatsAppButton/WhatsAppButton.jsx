@@ -1,5 +1,6 @@
 import React from 'react';
 import './WhatsAppButton.css';
+import whatsappIcon from '../../assets/icons8-whatsapp.svg';
 
 const WhatsAppButton = () => {
   const phoneNumber = '573001234567'; // Reemplaza con tu número
@@ -12,7 +13,7 @@ const WhatsAppButton = () => {
       rel="noopener noreferrer"
     >
       <img
-        src="https://img.icons8.com/?size=100&id=16733&format=png&color=FFFFFF"
+        src={whatsappIcon} // Usa el icono SVG importado
         alt="WhatsApp"
       />
     </a>
@@ -20,3 +21,4 @@ const WhatsAppButton = () => {
 };
 
 export default WhatsAppButton;
+
