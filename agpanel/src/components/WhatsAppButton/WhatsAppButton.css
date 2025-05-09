@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(149, 197, 157, 0.384);
     transition: transform 0.3s ease;
 }
 
@@ -21,4 +21,6 @@
 
 .whatsapp-button:hover {
     transform: scale(1.1);
+    border-color: #cfa8ff;            /* Borde morado pastel */
+
 }

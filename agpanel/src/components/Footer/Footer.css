@@ -44,7 +44,7 @@
   }
   
   .footer-section li:hover {
-    color: #fff;
+    color: #cfa8ff;  
   }
   
   .social-icons a {
@@ -56,7 +56,7 @@
   }
   
   .social-icons a:hover {
-    color: #fff;
+    color: #cfa8ff;  ;
   }
   
   .footer-bottom {
@@ -91,5 +91,5 @@
   }
   
   .footer-links a:hover {
-    color: #fff;
+    color: #cfa8ff;  ;
   }
