@@ -10,12 +10,12 @@
     width: 100%;
     z-index: 999;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  
   }
   
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    background-color: #1c1c2b;
     color: white;
     border-radius: 50%;
     padding: 0.5rem 0.7rem;
@@ -41,7 +41,9 @@
   }
   
   .nav-link:hover {
-    color: #f39c12;
+    color: #cfa8ff;
+  
+
   }
   
   .menu-toggle {

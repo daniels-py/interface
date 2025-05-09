@@ -5,7 +5,7 @@ const Ubicacion = () => {
     <section className="ubicacion-wrapper">
       <div className="ubicacion-container">
         <div className="ubicacion-text">
-          <h2 className="ubicacion-title">Encuéntranos en Mosquera</h2>
+          <h2 className="ubicacion-title">Encuéntranos en Funza</h2>
           <p className="ubicacion-description">
             Nuestra tienda se encuentra en una zona estratégica de Mosquera, cerca de los principales puntos de interés y con fácil acceso a transporte público.
           </p>
