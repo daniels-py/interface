@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  background-image: radial-gradient(circle, #e0e0e0 1px, transparent 1px); /* Fondo de puntitos */
+  background-size: 20px 20px; /* Tamaño de los puntitos */
+}
+
+
 html, body {
   height: 100%; /* Asegura que el body ocupe toda la pantalla */
 }

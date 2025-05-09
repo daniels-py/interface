@@ -1,78 +1,95 @@
 .header {
-    background-color: #000;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    border-radius: 50%;
-    padding: 0.5rem 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #cfa8ff;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-button {
+  background: #cfa8ff;
+  color: #ffffff;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(207, 168, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background: white;
+  color: #cfa8ff;
+  transform: scale(1.05);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .nav {
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .nav-link {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold; /* Hace el texto en negrita */
-
-    
-  }
-  
-  .nav-link:hover {
-    color: #cfa8ff;
-  
-
-  }
-  
-  .menu-toggle {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    width: 100%;
+    padding: 1rem 0;
     display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
   }
-  
-  /* Responsive menu */
-  @media (max-width: 768px) {
-    .nav {
-      position: absolute;
-      top: 70px;
-      right: 0;
-      background-color: #000;
-      flex-direction: column;
-      align-items: flex-end;
-      width: 100%;
-      padding: 1rem 2rem;
-      display: none;
-    }
-  
-    .nav.open {
-      display: flex;
-    }
-  
-    .menu-toggle {
-      display: block;
-      color: white;
-    }
+
+  .nav.open {
+    display: flex;
   }
-  
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .login-button {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}
