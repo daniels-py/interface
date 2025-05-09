@@ -5,6 +5,7 @@ import Ubicacion from "../../components/Ubicacion/Ubicacion"; // Asegúrate que 
 import HeroBanner from "../../components/Herobanner/HeroBanner";
 import WhatsAppButton from "../../components/WhatsAppButton/WhatsAppButton"; // Importa el botón
 import PaymentMethodsSlider from "../../components/PaymentMethodsSlider/PaymentMethodsSlider";
+import ProductContainer from "../../components/ProductContainer/ProductContainer"; // Asegúrate de que la ruta sea correcta
 
 
 
@@ -19,7 +20,7 @@ const Home = () => {
       <HeroBanner /> {/* Banner dinámico y centrado */}
 
       <main className="home-main">
-
+      <ProductContainer />
       </main>
       <PaymentMethodsSlider /> {/* Carrusel de logos */}
       <Ubicacion /> {/* Sección justo arriba del footer */}
