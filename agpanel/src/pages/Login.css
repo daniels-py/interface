@@ -1,0 +1,200 @@
+
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    margin: 0; /* Elimina márgenes */
+}
+
+/* ---------------------- */
+/* Contenedor Principal del Formulario */
+/* ---------------------- */
+
+.container-form {
+    background-color: #fff;                     /* Fondo blanco */
+    padding: 30px;                              /* Espaciado interno */
+    border-radius: 8px;                         /* Bordes redondeados */
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    width: 100%;
+    max-width: 400px;                           /* Máximo ancho del formulario */
+    text-align: center;                         /* Centra el contenido del texto */
+    animation: fadeIn 0.8s ease-in-out;         /* Animación de entrada */
+    /* border: 1px solid #6c5ce7; Opcional: borde morado decorativo */
+  }
+
+
+
+  /* Form Logo */
+.form-logo { 
+
+}
+
+  
+  /* ---------------------- */
+  /* Encabezado del Formulario */
+  /* ---------------------- */
+  h2 {
+    font-size: 24px;      /* Tamaño del texto */
+    color: #333;          /* Color oscuro */
+    margin-bottom: 20px;  /* Espacio inferior */
+  }
+  
+  /* ---------------------- */
+  /* Campos de Entrada de Texto */
+  /* ---------------------- */
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid #ddd;       /* Borde gris claro */
+    border-radius: 10px;          /* Bordes redondeados */
+    font-size: 16px;
+    transition: all 0.3s;         /* Transición suave para cambios */
+  }
+  
+  .input-field:focus {
+    border-color: #6c5ce7;        /* Borde morado al enfocar */
+    outline: none;                /* Elimina el contorno predeterminado */
+  }
+  
+  /* ---------------------- */
+  /* Botón de Inicio de Sesión */
+  /* ---------------------- */
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0;
+    background-color: #cfa8ff;   /* Morado */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out;
+  }
+  
+  .login-btn:hover {
+    background-color: #8780e4;   /* Color más claro al pasar el mouse */
+  }
+  
+  /* ---------------------- */
+  /* Sección de Login con Redes Sociales */
+  /* ---------------------- */
+  .social-login {
+    margin-top: 20px;
+  }
+  
+  /* Botones de Redes Sociales */
+  .social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .social-btn:hover {
+    transform: translateY(-1px);  /* Sube ligeramente al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra al hacer hover */
+  }
+  
+  /* Icono dentro del botón social */
+  .social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Botón de Google */
+  .google-btn {
+    border-color: #c9c6c6;
+    background-color: #ffffff;
+    color: rgb(12, 12, 12);
+  }
+  
+  .google-btn:hover {
+    background-color: #ffffff;
+    color: #cfa8ff;
+    border-color: #cfa8ff;
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(207, 168, 255, 0.3);
+  }
+  
+  /* Botón de GitHub */
+  .github-btn {
+    border-color: #c9c6c6;
+    background-color: #ffffff;
+    color: rgb(12, 12, 12);
+  }
+  
+  .github-btn:hover {
+    background-color: #ffffff;
+    color: #cfa8ff;
+    border-color: #cfa8ff;
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(207, 168, 255, 0.3);
+  }
+  
+  /* ---------------------- */
+  /* Logo del Formulario */
+  /* ---------------------- */
+  .form-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+    fill: #b0abe9; /* Color de relleno si es SVG */
+  }
+  
+  /* ---------------------- */
+  /* Animación de Entrada */
+  /* ---------------------- */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ---------------------- */
+  /* Enlace: ¿Olvidaste tu contraseña? */
+  /* ---------------------- */
+  .forgot-password a {
+    font-size: 13px;
+    margin-left: 140px;   /* Alineado hacia la derecha */
+    color: #895eee;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .forgot-password a:hover {
+    color: #b0abe9;       /* Color más claro al pasar el mouse */
+  }
+  
+  /* ---------------------- */
+  /* Enlace: Crear cuenta nueva */
+  /* ---------------------- */
+  .create-account a {
+    font-size: 14px;
+    color: #895eee;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .create-account a:hover {
+    color: #b0abe9;
+  }
+  
