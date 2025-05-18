@@ -3,8 +3,8 @@ import './PaymentMethodsSlider.css';
 
 import bancolombia from '../../assets/bancolombia.svg';
 import daviplata from '../../assets/daviplata.svg';
-import nequi from '../../assets/nequi-2.svg';
-import mastercard from '../../assets/mastercard-4.svg';
+import nequi from '../../assets/nequi-3.svg';
+import mastercard from '../../assets/mastercard-2.svg';
 
 const logos = [
   { src: bancolombia, alt: 'Bancolombia' },

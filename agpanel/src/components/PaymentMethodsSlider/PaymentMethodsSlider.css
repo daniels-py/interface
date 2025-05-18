@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;  /* Centrado vertical */
     align-items: center;      /* Centrado horizontal */
-    background-color: #fff;
+    /* background-color: #fff; */ /* Fondo blanco */
     text-align: center;
     padding: 2rem;
     box-sizing: border-box;
@@ -25,13 +25,13 @@
   .slider {
     overflow: hidden;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1700px;
     position: relative;
   }
   
   .slider-track {
     display: flex;
-    width: calc(250px * 12); /* 4 logos × 3 repeticiones = 12 */
+    width: calc(250px * 8); /* 4 logos × 3 repeticiones = 12 */
     animation: scroll 20s linear infinite;
   }
   

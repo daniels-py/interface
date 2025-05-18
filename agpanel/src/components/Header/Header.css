@@ -18,11 +18,14 @@
   color: white;
 }
 
+
 .nav {
   flex: 1;
   display: flex;
-  justify-content: center;
-  gap: 2.5rem;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;    /* Centra verticalmente */
+  gap: 2.5rem;            /* Espaciado entre los enlaces */
+  height: 100%;           /* Asegura que ocupe toda la altura del header */
 }
 
 .nav-link {
