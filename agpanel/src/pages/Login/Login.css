@@ -154,6 +154,22 @@
     animation: fadeIn 0.8s ease-in-out;
     fill: #b0abe9; /* Color de relleno si es SVG */
   }
+
+
+  /*mensaje de error*/
+
+  .error-message {
+  background-color: #fdecea;
+  color: #b71c1c;
+  padding: 12px 16px;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out; 
+}
+
   
   /* ---------------------- */
   /* Animación de Entrada */
