@@ -1,3 +1,4 @@
+/* --- Estilos generales del header --- */
 .header {
   background-color: #000;
   color: white;
@@ -18,14 +19,12 @@
   color: white;
 }
 
-
+/* --- Navegación en escritorio --- */
 .nav {
-  flex: 1;
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center;    /* Centra verticalmente */
-  gap: 2.5rem;            /* Espaciado entre los enlaces */
-  height: 100%;           /* Asegura que ocupe toda la altura del header */
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
 }
 
 .nav-link {
@@ -39,12 +38,7 @@
   color: #cfa8ff;
 }
 
-.actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
+/* --- Botón de login --- */
 .login-button {
   background: #cfa8ff;
   color: #ffffff;
@@ -62,37 +56,57 @@
   transform: scale(1.05);
 }
 
+/* --- Icono del menú (solo se muestra en responsive) --- */
 .menu-toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
   color: white;
+  transition: transform 0.3s ease;
 }
 
-/* Responsive */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* --- Responsive: Estilos para pantallas pequeñas --- */
 @media (max-width: 768px) {
   .nav {
     position: absolute;
-    top: 70px;
+    top: 100%;
     left: 0;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     background-color: #000;
-    width: 100%;
     padding: 1rem 0;
+    gap: 1.5rem;
     display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
 
   .nav.open {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .menu-toggle {
     display: block;
   }
 
-  .login-button {
-    padding: 0.4rem 1rem;
-    font-size: 0.9rem;
+  .actions .login-button {
+    display: none; /* Oculta el botón de login en header, ya está en el menú */
+  }
+
+  .nav .login-button {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
   }
 }

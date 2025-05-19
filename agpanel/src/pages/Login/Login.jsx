@@ -1,12 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 
-
 import './Login.css';
 
-import googleLogo from '../assets/google1.svg'
-import gitLogo from '../assets/git1.svg'
-
-
+import googleLogo from '../../assets/google1.svg';
+import gitLogo from '../../assets/git1.svg';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -19,7 +16,7 @@ const Login = () => {
   return (
     <div className="login-page">
       <div className="container-form">
-      <img src={gitLogo} alt="Home" className="form-logo" />
+        <img src={gitLogo} alt="Home" className="form-logo" />
         <h2>Iniciar Sesión</h2>
         <form onSubmit={handleLogin}>
           <input
