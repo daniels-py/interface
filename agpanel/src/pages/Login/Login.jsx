@@ -33,7 +33,7 @@ const Login = () => {
       const data = await response.json();
       const token = data.access;
       localStorage.setItem('authToken', token);
-      navigate('/dashboard');
+      navigate('/profile'); // Redirigir a la página de perfil después de iniciar sesión
     } catch (error) {
       setError(error.message);
     } finally {
