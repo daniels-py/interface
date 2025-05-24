@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { fetchUserProfile } from '../api/userApi'; // si lo colocaste ahí
-
+import Head from './head'; // Asegúrate de tener instalado next/head si usas Next.js
 const Profile = () => {
   const [profile, setProfile] = useState(null);
   const [error, setError] = useState('');
@@ -23,6 +23,7 @@ const Profile = () => {
 
   return (
     <div>
+      <Head/>
       <h2>{profile.message}</h2>
       <p>Id : {profile.id}</p>
       <p>Usuario: {profile.username}</p>
