@@ -1,6 +1,6 @@
 /* --- Estilos generales del header --- */
-.header {
-  background-color: #000;
+.page-header {
+  background-color: #000000;
   color: white;
   display: flex;
   align-items: center;

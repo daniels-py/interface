@@ -1,7 +1,6 @@
 import React from 'react';
 import './WhatsAppButton.css';
-import whatsappIcon from '../../assets/icons8-whatsapp.svg';
-
+import whatsappIcon from '../../../assets/icons8-whatsapp.svg';
 const WhatsAppButton = () => {
   const phoneNumber = '573001234567'; // Reemplaza con tu número
 

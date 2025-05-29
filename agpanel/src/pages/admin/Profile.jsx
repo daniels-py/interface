@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { fetchUserProfile } from '../api/userApi'; // si lo colocaste ahí
-import Head from './head'; // Asegúrate de tener instalado next/head si usas Next.js
+import { fetchUserProfile } from '../../api/userApi'; // si lo colocaste ahí
+import Head from '../head'; // Asegúrate de tener instalado next/head si usas Next.js
 const Profile = () => {
   const [profile, setProfile] = useState(null);
   const [error, setError] = useState('');

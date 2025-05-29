@@ -8,7 +8,7 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="header">
+    <header className="page-header">
       <div className="logo">A&G</div>
 
       <nav className={`nav ${isOpen ? 'open' : ''}`}>
