@@ -1,39 +1,100 @@
 .products-wrapper {
-    
-    display: flex;
-    justify-content: center;
-    padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1rem;
 
-      
-  }
-  
+}
+
+.products-container {
+  background-color: #fff;
+  max-width: 1950px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.products-container h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.product-image {
+  width: 100px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info h3 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  color: #222;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.5rem 0 1rem;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #27ae60;
+  margin-bottom: 0;
+}
+
+.cargando,
+.error,
+.no-products {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .products-container {
-    background-color: #fff; /* Fondo blanco */
-    max-width: 1350px; /* Aumentado el ancho */
-    width: 100%;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    text-align: center;
+    padding: 2rem 1rem;
   }
-  
+
   .products-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
   }
-  
-  /* Responsive ajustes */
-  @media (max-width: 768px) {
-    .products-container {
-      padding: 2rem 1rem;
-    }
-  
-    .products-container h2 {
-      font-size: 2rem;
-    }
-  }
-  
+}
