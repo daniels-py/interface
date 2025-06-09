@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { getBrands, deleteBrand, updateBrand } from "../services/brandServices";
+import Modal from "./Modal"; // Ahora es modal genérico
 
 function ListaMarcas() {
   const [marcas, setMarcas] = useState([]);
@@ -9,39 +11,21 @@ function ListaMarcas() {
   const token = localStorage.getItem("authToken");
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/core/marca/", {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setMarcas(data);
-        setLoading(false);
-      });
+    getBrands(token).then((data) => {
+      setMarcas(data);
+      setLoading(false);
+    });
   }, [token]);
 
   const eliminarMarca = async (id) => {
-    await fetch(`http://127.0.0.1:8000/core/marca/${id}/`, {
-      method: "DELETE",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+    await deleteBrand(id, token);
     setMarcas(marcas.filter((marca) => marca.id !== id));
     setModalEliminar({ visible: false, marca: null });
   };
 
   const actualizarMarca = async () => {
     const { marca, nuevoNombre } = modalActualizar;
-    await fetch(`http://127.0.0.1:8000/core/marca/${marca.id}/`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({ nombre: nuevoNombre }),
-    });
+    await updateBrand(marca.id, nuevoNombre, token);
     setMarcas(
       marcas.map((m) => (m.id === marca.id ? { ...m, nombre: nuevoNombre } : m))
     );
@@ -53,29 +37,43 @@ function ListaMarcas() {
   return (
     <div>
       {/* Modal Eliminar */}
-      {modalEliminar.visible && (
-        <div style={modalStyle}>
-          <p>¿Seguro que deseas eliminar la marca "{modalEliminar.marca.nombre}"?</p>
-          <button onClick={() => eliminarMarca(modalEliminar.marca.id)}>Sí, eliminar</button>
-          <button onClick={() => setModalEliminar({ visible: false, marca: null })}>Cancelar</button>
-        </div>
+      {modalEliminar.visible && modalEliminar.marca && (
+        <Modal
+          titulo="¿Eliminar marca?"
+          mensaje="Esta acción no se puede deshacer. La marca será eliminada permanentemente junto con toda su información."
+          onConfirmar={() => eliminarMarca(modalEliminar.marca.id)}
+          onCancelar={() => setModalEliminar({ visible: false, marca: null })}
+          textoConfirmar="Eliminar marca"
+          textoCancelar="Cancelar"
+        >
+          <div>
+            <strong>{modalEliminar.marca.nombre}</strong>
+            <h1>La marca registrada es: {modalEliminar.marca.nombre}</h1>
+            <span className="modal-chip">{modalEliminar.marca.nombre}</span>
+          </div>
+        </Modal>
       )}
 
       {/* Modal Actualizar */}
       {modalActualizar.visible && (
-        <div style={modalStyle}>
-          <p>Actualizar marca:</p>
+        <Modal
+          titulo="Actualizar marca"
+          onConfirmar={actualizarMarca}
+          onCancelar={() => setModalActualizar({ visible: false, marca: null, nuevoNombre: "" })}
+          textoConfirmar="Guardar"
+          textoCancelar="Cancelar"
+        >
           <input
             value={modalActualizar.nuevoNombre}
             onChange={(e) =>
               setModalActualizar((prev) => ({ ...prev, nuevoNombre: e.target.value }))
             }
+            style={{ padding: "0.5rem", width: "100%", borderRadius: "6px", border: "1px solid #ccc" }}
           />
-          <button onClick={actualizarMarca}>Guardar</button>
-          <button onClick={() => setModalActualizar({ visible: false, marca: null, nuevoNombre: "" })}>Cancelar</button>
-        </div>
+        </Modal>
       )}
 
+      {/* Lista de marcas */}
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
         {marcas.map((marca) => (
           <div
@@ -108,20 +106,5 @@ function ListaMarcas() {
     </div>
   );
 }
-
-// Estilo simple para el modal
-const modalStyle = {
-  background: "rgba(0, 0, 0, 0.5)",
-  position: "fixed",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  background: "#fff",
-  padding: "2rem",
-  border: "1px solid #ccc",
-  borderRadius: "8px",
-  zIndex: 1000,
-  boxShadow: "0 4px 16px rgba(0,0,0,0.2)",
-};
 
 export default ListaMarcas;
