@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home/Home';
-import Login from './pages/Login/Login';
-import Register from './pages/Register';
-import Dashboard from './pages/admin/Dashboard';
-import Profile from './pages/admin/Profile';  
-import ProtectedRoute from './routes/ProtectedRoute';
+import Home from './pages/Home'
+import Login from './pages/Login';
+import Panel from './pages/Panel';
+import Brands from './pages/Brands';
+import ProtectedRoute from './ProtectedRoute';
+
 
 
 function App() {
@@ -12,20 +12,41 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/dashboard" element={<Dashboard />} />
+      
 
+      
       <Route
-          path="/Profile"
+        path="/Panel"
+        element={
+          <ProtectedRoute>
+            <Panel />
+          </ProtectedRoute>
+        }
+      />
+
+      {/* Puedes agregar más rutas aquí */}
+      <Route
+          path="/Brands"
           element={
             <ProtectedRoute>
-              <Profile/>
+              <Brands/>
             </ProtectedRoute>
           }
         />
       </Routes>
-  
+
+
+   
+   
+    
+
+
+    
+
+    
   );
+  
 }
+console.log("App cargado");
 
 export default App;
