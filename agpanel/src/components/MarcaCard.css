@@ -30,10 +30,19 @@
 .imagen-placeholder {
   width: 50px;
   height: 50px;
-  background: #efc3f8;
+  background: linear-gradient(135deg, #a55cf3, #eeb2f8); /* degradado suave morado/rosado */
   border-radius: 8px;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.icon-placeholder {
+  color: white;
+  font-size: 1.5rem;
+}
+
 
 .nombre-marca {
   font-size: 1.25rem;

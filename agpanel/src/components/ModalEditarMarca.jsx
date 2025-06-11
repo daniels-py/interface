@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import './Modal.css';
 import { actualizarMarca } from '../services/brandServices';
 
-const ModalEditarMarca = ({ marca, onClose }) => {
+const ModalEditarMarca = ({ marca, onClose, onMarcaActualizada }) => {
   const [nombre, setNombre] = useState(marca.nombre);
   const token = localStorage.getItem("authToken");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await actualizarMarca(marca.id, nombre, token);
+    const actualizada = await actualizarMarca(marca.id, nombre, token);
+    if (onMarcaActualizada) onMarcaActualizada(actualizada);
     onClose();
   };
 
@@ -16,6 +17,7 @@ const ModalEditarMarca = ({ marca, onClose }) => {
     <div className="modal-overlay">
       <form className="modal-content" onSubmit={handleSubmit}>
         <h2>Editar Marca</h2>
+        <p>Modifica la información de la marca</p>
         <input
           type="text"
           value={nombre}

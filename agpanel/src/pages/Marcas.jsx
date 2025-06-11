@@ -4,12 +4,14 @@ import MarcaCard from '../components/MarcaCard';
 import ModalVerMarca from '../components/ModalVerMarca';
 import ModalEditarMarca from '../components/ModalEditarMarca';
 import ModalEliminarMarca from '../components/ModalEliminarMarca';
+import ModalCrearMarca from '../components/ModalCrearMarca';
 import './Marcas.css'; // Asegúrate de tener un archivo CSS para estilos
 
 const Marcas = () => {
   const [marcas, setMarcas] = useState([]);
   const [modalActual, setModalActual] = useState(null);
   const [marcaSeleccionada, setMarcaSeleccionada] = useState(null);
+  const [mostrarCrear, setMostrarCrear] = useState(false);
 
   // 👇 Paginación
   const [paginaActual, setPaginaActual] = useState(1);
@@ -44,10 +46,17 @@ const Marcas = () => {
     setMarcaSeleccionada(null);
   };
 
+  const handleGuardarMarca = (nuevaMarca) => {
+    setMarcas([nuevaMarca, ...marcas]);
+  };
+
   return (
     <div style={{ padding: '2rem' }}>
       <h2>Marcas</h2>
       <p>¡Bienvenido al panel de marcas!</p>
+      <button onClick={() => setMostrarCrear(true)} className="btn-crear">
+        Crear Marca
+      </button>
 
       <div className="contenedor-marcas">
         {marcasActuales.map((marca) => (
@@ -81,10 +90,27 @@ const Marcas = () => {
         <ModalVerMarca marca={marcaSeleccionada} onClose={cerrarModal} />
       )}
       {modalActual === 'editar' && (
-        <ModalEditarMarca marca={marcaSeleccionada} onClose={cerrarModal} />
+        <ModalEditarMarca
+          marca={marcaSeleccionada}
+          onClose={cerrarModal}
+          onMarcaActualizada={(marcaActualizada) => {
+            setMarcas(marcas.map(m => m.id === marcaActualizada.id ? marcaActualizada : m));
+            cerrarModal();
+          }}
+        />
       )}
       {modalActual === 'eliminar' && (
         <ModalEliminarMarca marca={marcaSeleccionada} onClose={cerrarModal} />
+      )}
+      {/* MODAL CREAR */}
+      {mostrarCrear && (
+        <ModalCrearMarca
+          onClose={() => setMostrarCrear(false)}
+          onMarcaCreada={(nuevaMarca) => {
+            setMarcas([nuevaMarca, ...marcas]);
+            setMostrarCrear(false);
+          }}
+        />
       )}
     </div>
   );

@@ -5,6 +5,8 @@ import ModalEditarMarca from './ModalEditarMarca';
 import ModalEliminarMarca from './ModalEliminarMarca';
 import { IoEyeOutline } from "react-icons/io5";
 import { AiOutlineDelete } from "react-icons/ai";
+import { FaTag } from "react-icons/fa"; // o cualquier otro ícono
+
 
 import { MdEdit, MdDeleteOutline } from "react-icons/md"; // <-- Agrega estos imports
 
@@ -15,7 +17,9 @@ const MarcaCard = ({ marca }) => {
     <>
       <div className="card-marca">
         <div className="estado-activa">Activa</div>
-        <div className="imagen-placeholder" />
+        <div className="imagen-placeholder">
+          <FaTag className="icon-placeholder" />
+        </div>
         <h3 className="nombre-marca">{marca.nombre}</h3>
         <p className="descripcion-marca">{marca.descripcion}</p>
         <p className="pais"><strong>País:</strong> {marca.pais}</p>
