@@ -1,10 +1,12 @@
-
 import React, { useState } from 'react';
 import './MarcaCard.css';
 import ModalVerMarca from './ModalVerMarca';
 import ModalEditarMarca from './ModalEditarMarca';
 import ModalEliminarMarca from './ModalEliminarMarca';
-import { MdVisibility, MdEdit, MdDelete } from 'react-icons/md';
+import { IoEyeOutline } from "react-icons/io5";
+import { AiOutlineDelete } from "react-icons/ai";
+
+import { MdEdit, MdDeleteOutline } from "react-icons/md"; // <-- Agrega estos imports
 
 const MarcaCard = ({ marca }) => {
   const [modal, setModal] = useState(null);
@@ -23,13 +25,13 @@ const MarcaCard = ({ marca }) => {
 
       <div className="botones">
         <button className="btn-ver" onClick={() => setModal('ver')}>
-          <MdVisibility /> Ver
+          <IoEyeOutline /> Ver
         </button>
         <button className="btn-editar" onClick={() => setModal('editar')}>
           <MdEdit /> Editar
         </button>
         <button className="btn-eliminar" onClick={() => setModal('eliminar')}>
-          <MdDelete />
+          <AiOutlineDelete />
         </button>
       </div>
 

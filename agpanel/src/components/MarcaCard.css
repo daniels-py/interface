@@ -30,7 +30,7 @@
 .imagen-placeholder {
   width: 50px;
   height: 50px;
-  background: #f3f3f3;
+  background: #efc3f8;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
@@ -63,52 +63,70 @@
 
 .botones button {
   flex: 1;
-  border: 2px solid transparent;
+  /* Elimina border: 2px solid transparent; */
   background: transparent;
-  padding: 0.5rem;
+  padding: 0.60rem 1rem; /* Más grande */
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 1.0rem; /* Más grande */
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  border: 1px solid #e5e7eb; /* borde gris claro */
+  border-width: 2px; /* Asegura grosor */
+  border-style: solid; /* Asegura estilo */
 }
 
 /* VER - Morado pastel */
 .btn-ver {
-  border-color: #ddd6fe; /* pastel morado */
-  color: #7c3aed;
-}
-
-.btn-ver:hover {
-  background-color: #ede9fe; /* hover más visible */
-  color: #5b21b6;
+  border-color: #a78bfa; /* morado pastel */
+  color: #935eee;
 }
 
 /* EDITAR - Rosado pastel */
 .btn-editar {
-  border-color: #fbcfe8; /* pastel rosado */
+  border-color: #f9a8d4; /* rosado pastel */
   color: #db2777;
-}
-
-.btn-editar:hover {
-  background-color: #fce7f3;
-  color: #9d174d;
 }
 
 /* ELIMINAR - Rojo pastel */
 .btn-eliminar {
-  border-color: #fecaca; /* pastel rojo */
+  border-color: #fca5a5; /* rojo pastel */
   color: #ef4444;
 }
 
-.btn-eliminar:hover {
-  background-color: #fee2e2;
-  color: #991b1b;
+
+
+/* VER - Morado pastel */
+.btn-ver {
+  border-color: #a78bfa;
+  color: #935eee;
+}
+.btn-ver:hover {
+  background: #ede9fe;
+  color: #7c3aed;
 }
 
+/* EDITAR - Rosado pastel */
+.btn-editar {
+  border-color: #f9a8d4;
+  color: #db2777;
+}
+.btn-editar:hover {
+  background: #fdf2f8;
+  color: #be185d;
+}
+
+/* ELIMINAR - Rojo pastel */
+.btn-eliminar {
+  border-color: #fca5a5;
+  color: #ef4444;
+}
+.btn-eliminar:hover {
+  background: #fef2f2;
+  color: #b91c1c;
+}
 
 
