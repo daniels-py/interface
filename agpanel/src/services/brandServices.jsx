@@ -1,33 +1,32 @@
-export const createBrand = async (brandName) => {
+export const crearMarca = async (nombreMarca) => {
   const token = localStorage.getItem("authToken");
-  const response = await fetch("http://127.0.0.1:8000/core/marca/", {
+  const respuesta = await fetch("http://127.0.0.1:8000/core/marca/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify({ nombre: brandName }), // <-- aquí el cambio
+    body: JSON.stringify({ nombre: nombreMarca }),
   });
-  return response;
+  return respuesta;
 };
 
 
-
-export const getBrands = async (token) => {
-  const response = await fetch("http://127.0.0.1:8000/core/marca/", {
+export const obtenerMarcas = async (token) => {
+  const respuesta = await fetch("http://127.0.0.1:8000/core/marca/", {
     headers: { Authorization: `Bearer ${token}` },
   });
-  return response.json();
+  return respuesta.json();
 };
 
-export const deleteBrand = async (id, token) => {
+export const eliminarMarca = async (id, token) => {
   return fetch(`http://127.0.0.1:8000/core/marca/${id}/`, {
     method: "DELETE",
     headers: { Authorization: `Bearer ${token}` },
   });
 };
 
-export const updateBrand = async (id, nombre, token) => {
+export const actualizarMarca = async (id, nombre, token) => {
   return fetch(`http://127.0.0.1:8000/core/marca/${id}/`, {
     method: "PUT",
     headers: {
@@ -38,4 +37,4 @@ export const updateBrand = async (id, nombre, token) => {
   });
 };
 
-// Ya tienes createBrand aquí si lo necesitas
+// Ya tienes crearMarca aquí si lo necesitas

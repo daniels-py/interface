@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home'
 import Login from './pages/Login';
 import Panel from './pages/Panel';
-import Brands from './pages/Brands';
+import Marcas from './pages/Marcas';
 import ProtectedRoute from './ProtectedRoute';
 
 
@@ -26,10 +26,10 @@ function App() {
 
       {/* Puedes agregar más rutas aquí */}
       <Route
-          path="/Brands"
+          path="/Marcas"
           element={
             <ProtectedRoute>
-              <Brands/>
+              <Marcas/>
             </ProtectedRoute>
           }
         />

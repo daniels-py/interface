@@ -1,96 +1,79 @@
-/* Modal.css */
-.modal-backdrop {
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(4px);
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 999;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  z-index: 999;
 }
 
 .modal-content {
-  background: white;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #fff;
   border-radius: 12px;
   padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  
+  /* animación */
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: aparecerModal 0.4s ease-out forwards;
+}
+
+@keyframes aparecerModal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content input {
   width: 100%;
-  max-width: 420px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  animation: scaleIn 0.3s ease;
-}
-
-.modal-title {
-  color: #dc3545;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.h1{
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.modal-warning {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0.5rem 0 1rem;
-}
-
-.modal-card {
-  background-color: #94bde6;
-  padding: 1rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.modal-chip {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background-color: #212529;
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
 }
 
 .modal-actions {
   display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
-.btn-cancelar {
-  padding: 0.5rem 1rem;
-  border: 1px solid #212529;
-  background-color: white;
-  color: #212529;
+.modal-actions button {
+  flex: 1;
+  margin: 0 0.25rem;
+  padding: 0.5rem;
+  border: none;
   border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-cerrar {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.btn-guardar {
+  background: #d1fae5;
+  color: #065f46;
 }
 
 .btn-eliminar {
-  padding: 0.5rem 1rem;
-  background-color: #dc3535;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  background: #fee2e2;
+  color: #991b1b;
 }
 
-@keyframes scaleIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 

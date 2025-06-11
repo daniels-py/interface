@@ -1,0 +1,37 @@
+/* Marcas.css */
+.contenedor-marcas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.7rem;;
+  max-width: 1200px;
+  margin: 5rem auto 0 auto;
+  padding: 0 1rem;
+}
+
+
+.paginador {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.paginador button {
+  background-color: #e5e5e5;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.paginador button:hover {
+  background-color: #d1d1d1;
+}
+
+.paginador button.activo {
+  background-color: #aa6df0;
+  color: white;
+}
