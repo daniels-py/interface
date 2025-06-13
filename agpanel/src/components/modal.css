@@ -14,7 +14,7 @@
 
 .modal-content {
   font-family: 'Inter', Arial, sans-serif;
-  background: #fff;
+  background-color: white;
   border-radius: 12px;
   padding: 2rem;
   width: 90%;
@@ -33,47 +33,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.modal-content input {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.modal-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
-.modal-actions button {
-  flex: 1;
-  margin: 0 0.25rem;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.btn-cerrar {
-  background: #e0f2fe;
-  color: #0369a1;
-}
-
-.btn-guardar {
-  background: #d1fae5;
-  color: #065f46;
-}
-
-.btn-eliminar {
-  background: #fee2e2;
-  color: #991b1b;
 }
 
 

@@ -24,12 +24,17 @@
 
 .modal-header h2 {
   margin: 0;
+  text-align: left; /* Alinea el texto a la izquierda */
+
 }
 
 .subtitulo {
   font-size: 0.9rem;
   color: #6b7280;
-  margin-top: 0.25rem;
+  margin-top: 2rem;
+  text-align: left; /* Alinea el texto a la izquierda */
+
+  
 }
 
 .modal-close {
@@ -57,8 +62,9 @@
 }
 
 .modal-actions {
+  
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 1rem;
   margin-top: 1.5rem;
 }
@@ -67,7 +73,8 @@
   background: white;
   border: 1px solid #d1d5db;
   color: #374151;
-  padding: 0.5rem 1rem;
+  width: 100%;
+  padding: 0.5rem 1.2rem;
   border-radius: 8px;
   font-weight: 600;
 }
@@ -80,6 +87,8 @@
   background: linear-gradient(to right, #ec4899, #8b5cf6);
   color: white;
   border: none;
+  width: 100%;
+
   padding: 0.5rem 1.2rem;
   border-radius: 8px;
   font-weight: 600;
@@ -92,11 +101,4 @@
 }
 
 
-/* Ejemplo en MarcaCard.css */
-.card-marca {
-  opacity: 1;
-  transition: opacity 0.3s;
-}
-.card-marca.ocultando {
-  opacity: 0;
-}
+

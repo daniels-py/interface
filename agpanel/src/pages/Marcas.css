@@ -1,37 +1,30 @@
-/* Marcas.css */
 .contenedor-marcas {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.7rem;;
-  max-width: 1200px;
-  margin: 5rem auto 0 auto;
-  padding: 0 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
-
-.paginador {
-  margin-top: 2rem;
+.card-marca {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  transition: transform 0.2s;
   display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 
-.paginador button {
-  background-color: #e5e5e5;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+.card-marca:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
-.paginador button:hover {
-  background-color: #d1d1d1;
-}
 
-.paginador button.activo {
-  background-color: #aa6df0;
-  color: white;
+
+.crear-marca-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
 }
